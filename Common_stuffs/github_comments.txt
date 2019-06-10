@@ -1,0 +1,115 @@
+
+F:\Sample>git init
+Initialized empty Git repository in F:/Sample/.git/
+
+F:\Sample>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        letdec.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\Sample>git add .
+
+F:\Sample>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   letdec.js
+
+
+F:\Sample>git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'karth@DESKTOP-KVPN36F.(none)')
+
+F:\Sample>git config --global user.email karthika136@gmail.com
+
+F:\Sample>git config --global user.name karthika136
+
+F:\Sample>git config --global user.name karthika136
+
+F:\Sample>git log
+fatal: your current branch 'master' does not have any commits yet
+
+F:\Sample>git commit -m "first commit"
+[master (root-commit) d38c07c] first commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 letdec.js
+
+F:\Sample>git log
+commit d38c07c323e2dacfbea23fbb62494d02bbba7fcc (HEAD -> master)
+Author: karthika136 <karthika136@gmail.com>
+Date:   Wed Jun 5 10:20:07 2019 -0400
+
+    first commit
+
+F:\Sample>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\Sample>git push origin master
+
+F:\Sample>git remote -v
+
+F:\Sample>git remote -v
+
+F:\Sample>git remote add origin https://github.com/karthika136/Javascripts.git
+
+F:\Sample>git remote -v
+origin  https://github.com/karthika136/Javascripts.git (fetch)
+origin  https://github.com/karthika136/Javascripts.git (push)
+
+F:\Sample>git remote -v
+F:\Sample>git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 262 bytes | 87.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/karthika136/Javascripts.git
+ * [new branch]      master -> master
+
+F:\Sample>git add .
+
+F:\Sample>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   letdec - Copy.js
+
+
+F:\Sample>git commit -m "added stuff"
+[master c9517ba] added stuff
+ 1 file changed, 6 insertions(+)
+ create mode 100644 letdec - Copy.js
+
+F:\Sample>git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 240 bytes | 120.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/karthika136/Javascripts.git
+   d38c07c..c9517ba  master -> master
