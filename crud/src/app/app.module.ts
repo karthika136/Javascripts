@@ -12,6 +12,10 @@ import { ForelementComponent } from './forelement/forelement.component';
 import { RecordsService } from './records.service';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { DataComponent } from './data/data.component';
     HelloComponent,
     ForelementComponent,
     HomeComponent,
-    DataComponent
+    DataComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -27,17 +33,28 @@ import { DataComponent } from './data/data.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+
+      {
+        path:'login',
+        component:LoginComponent
+      },
+      
+      {
+        path:'data',
+        component:DataComponent,
+        canActivate : [AuthGuard]
+      },
+      {
+        path:'logout',
+        component:LogoutComponent
+      },
       {
         path:'',
         component:HomeComponent
-      },
-      {
-        path:'data',
-        component:DataComponent
       }
     ]),
   ],
-  providers: [RecordsService],
+  providers: [RecordsService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

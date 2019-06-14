@@ -15,6 +15,10 @@ export class DataComponent implements OnInit {
   ngOnInit() {
     this.FirstService.getData().subscribe(data1=>{
       this.records = data1
+      if(!data1)
+      {
+        localStorage.removeItem('loggedIn')
+      }
     })
   }
 

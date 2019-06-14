@@ -8,12 +8,11 @@ export class RecordsService {
 
   constructor(private http:HttpClient) { }
 
-  Url:string = 'https://jsonplaceholder.typicode.com/todos';
-  todoslimit = '?_limit=5';
+  Url:string = '/assets/data.json';
 
   getData()
   {
-    return this.http.get('https://jsonplaceholder.typicode.com/todos?_limit=5');
+    return this.http.get(this.Url);
     // return [
     //   {
     //     name: 'Karthi',
