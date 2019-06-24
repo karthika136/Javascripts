@@ -1,0 +1,26 @@
+<h1 style="text-align:center">
+  User Registration
+</h1>
+<div class="login">
+  <h2 class="login-header">Register Here</h2>
+  <form class="login-container" (ngSubmit)="registerUser($event)">
+
+    <p>
+      <input type="username" placeholder="username" name="username" id="username">
+    </p>
+
+    <p>
+      <input type="password" placeholder="Password" name="password" id="password">
+    </p>
+
+    <p>
+      <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword">
+    </p>
+
+    <p>
+      <input type="submit" value="Submit">
+    </p>
+  </form>
+</div>
+
+

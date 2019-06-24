@@ -28,4 +28,11 @@ export class AuthService {
   {
     return this.http.get(this.Url)
   }
+
+  registerUser(username,password)
+  {
+    return this.http.post('/api/register',{
+      username,password
+    })
+  }
 }
